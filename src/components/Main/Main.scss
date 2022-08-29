@@ -1,0 +1,9 @@
+@use './../../common/colors' as c;
+
+main{
+    min-height: 68vh;
+}
+
+@media screen and (min-width: c.$breakPointTablet){
+    
+}

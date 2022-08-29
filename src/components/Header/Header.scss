@@ -1,0 +1,23 @@
+
+@use './../../common/colors';
+
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: colors.$color30;
+    color: colors.$colorBlack;
+
+    .#{&}__logo{
+        display: flex;
+        align-items: center;
+
+        img{
+            margin: 1em;
+            width: 32px;
+            height: 32px;
+        }
+    }
+}
+
+#root{
+}
