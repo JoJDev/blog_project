@@ -10,7 +10,7 @@ nav {
 
     .bar-btn {
         font-size: larger;
-        color: colors.$colorLigth;
+        color: colors.$colorLight;
         margin-right: 20px;
         cursor: pointer;
     }
@@ -36,6 +36,7 @@ nav {
                 font-size: 16px;
                 text-transform: uppercase;
                 font-weight: 600;
+                text-decoration: none;
 
                 padding: 1em;
                 background-color: colors.$colorBlack;
@@ -43,7 +44,7 @@ nav {
             }
 
             a:hover {
-                color: colors.$color10;
+                color: colors.$colorLight;
                 transition: .3%;
             }
         }
@@ -54,7 +55,7 @@ nav {
     }
 
     #check:checked~ul {
-        height: 90vh;
+        height: 100vh;
     }
 
     #check:checked~ul li {

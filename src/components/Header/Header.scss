@@ -1,23 +1,26 @@
 
-@use './../../common/colors';
+@use './../../common/colors' as c;
 
 header{
     display: flex;
     justify-content: space-between;
-    background-color: colors.$color30;
-    color: colors.$colorBlack;
+    background-color: c.$color30;
+
 
     .#{&}__logo{
         display: flex;
         align-items: center;
-
+        text-decoration: none;
         img{
             margin: 1em;
             width: 32px;
             height: 32px;
         }
-    }
-}
 
-#root{
+        h1{
+            padding-right: 1em;
+            text-shadow: 5px 10px 10px c.$color10;
+            color: c.$color60;
+        }
+    }
 }

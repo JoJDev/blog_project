@@ -1,9 +1,9 @@
 import './Main.scss'
 
-function Main() {
+function Main(props) {
     return (
         <main>
-            <h3>main</h3>
+            {props.children}
             {/* <PostRecientes /> */}
         </main>
     );

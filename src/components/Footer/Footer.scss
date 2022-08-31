@@ -10,6 +10,7 @@ footer{
     background-color: colors.$colorBlack;
 
     *{
+        padding: 1.5em 0;
         max-width: 60vw;
         text-align: center;
     }
@@ -26,6 +27,7 @@ footer{
         justify-content: space-around;
         
         *{
+            padding: 2em 0;
             max-width: 33vw;
         }
     }

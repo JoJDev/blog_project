@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom'
 import './Nav.scss';
 
 function Nav(props) {
@@ -12,10 +13,10 @@ function Nav(props) {
             </label>
             <ul>
                 <li>
-                    <a href="">Log in</a>
+                    <NavLink to="/login">Log in</NavLink>
                 </li>
                 <li>
-                    <a href="">Sign in</a>
+                    <NavLink to="/signin">Sign in</NavLink>
                 </li>
             </ul>
         </nav>
