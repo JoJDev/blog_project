@@ -16,7 +16,7 @@ python -m venv venv
 source bin/activate      # Linux
 
 pip install -r requirements.txt
-python manage.py run server 
+python manage.py runserver 
 ~~~
 
 React commands
