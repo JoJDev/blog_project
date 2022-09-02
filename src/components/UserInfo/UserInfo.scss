@@ -1,0 +1,58 @@
+@use './../../common/colors' as c;
+
+.user_info {
+    display: grid;
+    grid-template-columns: 25% 70%;
+    gap: 15px 10px;
+
+    justify-content: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 2em 1ex 1em;
+
+    input {
+        justify-self: normal;
+        align-self: center;
+        height: 2em;
+
+        width: 100%;
+        border: 0;
+        border-bottom: 1px solid c.$colorBlack;
+        padding: 0 10px;
+    }
+
+    @mixin button {
+        margin: 2em auto 0;
+        width: 90%;
+        height: 3.5em;
+        border-radius: 32px;
+        background-color: c.$color60;
+    }
+
+    @mixin button--hover {
+        background-color: c.$color10;
+        color: c.$colorLight;
+
+    }
+
+    input[type="submit"] {
+        display: none;
+        @include button()
+    }
+
+    input[type="submit"]:hover {
+        @include button--hover()
+    }
+
+    input[type="reset"] {
+        display: none;
+        @include button()
+    }
+
+    input[type="reset"]:hover {
+        @include button--hover()
+    }
+
+
+
+
+}

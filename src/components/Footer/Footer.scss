@@ -1,6 +1,8 @@
 @use './../../common/colors';
 
 footer{
+    position: relative;
+    bottom: 0;
     width: 100%;
     display: flex;
     flex-flow: column wrap;
@@ -10,6 +12,7 @@ footer{
     background-color: colors.$colorBlack;
 
     *{
+        padding: 1em 0;
         max-width: 60vw;
         text-align: center;
     }
@@ -22,10 +25,13 @@ footer{
 
 @media screen and (min-width: colors.$breakPointTablet){
     footer{
+        position: relative;
+        bottom: 0;
         flex-flow: row nowrap;
         justify-content: space-around;
         
         *{
+            padding: 2em 0;
             max-width: 33vw;
         }
     }

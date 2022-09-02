@@ -1,9 +1,16 @@
 @use './../../common/colors' as c;
 
-main{
+main {
     min-height: 68vh;
+    margin: 5px 5px 0;
+    padding: 1ex;
+    background-color:saturation($color: c.$color60);
 }
 
-@media screen and (min-width: c.$breakPointTablet){
-    
+@media screen and (min-width: c.$breakPointTablet) {
+    main {
+        min-height: 68vh;
+        margin: 10px 10px 0;
+        padding: 1em 2em;
+    }
 }
