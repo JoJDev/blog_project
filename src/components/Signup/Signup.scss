@@ -6,7 +6,7 @@
     align-items: center;
 
     margin: 2em auto;
-    width: 85vw;
+    width: 450px;
     border: 2px solid c.$colorBlack;
     border-radius: 10px;
     padding: 3em 0;
@@ -51,10 +51,5 @@
     }
 }
 
-@media screen and (min-width: c.$breakPointLaptop) {
-    .signup__container {
-        // margin: 1em;
-        width: 50vw;
-        display: flex;
-    }
-}
+// @media screen and (min-width: c.$breakPointLaptop) {
+// }

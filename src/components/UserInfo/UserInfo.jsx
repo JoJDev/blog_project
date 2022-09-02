@@ -1,6 +1,9 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import { UserContext } from "../../pages/UserPage";
 
-import axios from "axios"
+import axios from "axios";
+
+import './UserInfo.scss';
 
 export default function UserInfo({ infoURL }) {
 
@@ -53,24 +56,24 @@ export default function UserInfo({ infoURL }) {
     }
 
     return (
-        <form onSubmit={ () => { } }>
+        <form className="user_info" onSubmit={ () => { } }>
             <label htmlFor="name">Nombre: </label>
-            <input type="text" id='name' value={ "sad" } disabled />
+            <input type="text" id='name' value={ "dato" } disabled />
             <label htmlFor="lastname">Apellidos: </label>
-            <input type="text" id='lastname' value={ "sad" } disabled />
+            <input type="text" id='lastname' value={ "dato" } disabled />
             <label htmlFor="username">Nombre de usuario: </label>
-            <input type="text" id='username' value={ "sad" } disabled />
+            <input type="text" id='username' value={ "dato" } disabled />
             <label htmlFor="email">Correo electrónico: </label>
-            <input type="email" id='email' value={ "sad" } disabled />
+            <input type="email" id='email' value={ "dato" } disabled />
             <label htmlFor="facebook">Facebook: </label>
-            <input type="url" id='facebook' value={ "sad" } disabled />
+            <input type="url" id='facebook' value={ "dato" } disabled />
             <label htmlFor="twitter">Twitter </label>
-            <input type="url" id='twitter' value={ "sad" } disabled />
+            <input type="url" id='twitter' value={ "dato" } disabled />
             <label htmlFor="twitch">Twitch: </label>
-            <input type="url" id='twitch' value={ "sad" } disabled />
+            <input type="url" id='twitch' value={ "dato" } disabled />
 
+            <input type="reset" value="Resetear" style={{}}/>
             <input type="submit" value="Cambiar" />
-            <input type="reset" value="Resetear" />
 
         </form>
     );

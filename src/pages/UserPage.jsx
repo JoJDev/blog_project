@@ -3,7 +3,25 @@ import Main from '../components/Main/Main';
 import Footer from '../components/Footer/Footer';
 import UserInfo from '../components/UserInfo/UserInfo';
 import UserActions from '../components/UserActions/UserActions';
-import { Link } from 'react-router-dom';
+import { createContext, useState } from 'react';
+
+export const UserContext = createContext();
+
+export function UserContextProvider(props) {
+    const [editForm, setEditForm] = useState(false);
+    const [userInfo, setUserInfo] = useState({});
+
+
+    return (
+        <UserContext.Provider value={ {
+            editForm: editForm,
+            setEditForm: setEditForm,
+            userInfo: userInfo,
+        } }>
+            { props.children }
+        </UserContext.Provider>
+    );
+}
 
 export default function SignUpPage() {
 
@@ -17,9 +35,12 @@ export default function SignUpPage() {
         <>
             <Header />
             <Main>
-
-                <UserActions infoURL={userURL} />
-                <UserInfo />
+                {/* <UserActions />
+                <UserInfo infoURL={ userURL } /> */}
+                <UserContextProvider>
+                    <UserActions />
+                    <UserInfo infoURL={ userURL } />
+                </UserContextProvider>
 
             </Main>
             <Footer />

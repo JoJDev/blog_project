@@ -39,7 +39,7 @@ export default function Login() {
 
             <form onSubmit={ handleSubmit }>
                 <label htmlFor="email"> Correo electronico</label>
-                <input type="email" id="email" required autofocus/>
+                <input type="email" id="email" required autoFocus/>
                 <label htmlFor="pass"> Contraseña</label>
                 <input type="password" id="pass" required/>
                 <input type="submit" value="Inicia sesión" />

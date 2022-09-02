@@ -16,7 +16,7 @@ function Nav(props) {
                     <NavLink to="/login">Log in</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/signin">Sign in</NavLink>
+                    <NavLink to="/signin">Sign up</NavLink>
                 </li>
             </ul>
         </nav>

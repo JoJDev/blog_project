@@ -1,0 +1,36 @@
+@use './../../common/colors' as c;
+
+@mixin button {
+    margin: 2em auto 0;
+    width: 90%;
+    height: 3em;
+    border: 0;
+    border-bottom: 2px solid c.$colorBlack;
+    border-radius: 32px;
+    background-color: c.$color60;
+}
+
+@mixin button--hover {
+    background-color: c.$color10;
+    color: c.$colorLight;
+
+}
+
+.user_actions {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+
+    li {
+        width: 30%;
+
+        button {
+            @include button();
+        }
+
+        button:hover{
+            @include button--hover();
+        }
+    }
+
+}
