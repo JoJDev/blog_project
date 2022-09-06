@@ -40,10 +40,9 @@ export default function Signup() {
             "password": event.target.password.value
         })
             .then(res => {
-                console.log(res.data);
                 //!sessionStorage.getItem("access") ? saveKeys(res.data) : "";
             })
-            .catch(error => setMessage("Error: no se pudo conectar con la base de datos, intentelo más tarde"));
+            .catch(error => setMessage("Error: no se pudo conectar con la base de datos, inténtelo más tarde"));
     }
 
     return (
