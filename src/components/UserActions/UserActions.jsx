@@ -1,39 +1,36 @@
 //import { useContext } from 'react';
 //import { UserContext } from '../../pages/UserPage';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 import './UserActions.scss';
 
-export default function UserActions({editForm, setEditForm, }) {
+export default function UserActions({ editForm, setEditForm, deleteUser }) {
     //const {editForm, setEditForm} = useContext(UserContext);
 
-    function modify(){
+    // function activateInputs() {
+    //     const inputs = document.querySelectorAll(".user_info label + input");
+    //     inputs.forEach((item) => {
+    //         if (item.value === "")
+    //             item.removeAttribute("value");
+    //     })
+    // }
+
+    function modify() {
         setEditForm(!editForm);
         console.log(editForm);
 
     }
 
-    function changeName(){
+    function changeName() {
 
-    }
-
-    function deleteAccount(){
-        axios.get(userURL, {
-            headers: {
-                "Authorization": "Bearer " + sessionStorage.getItem("access"),
-                "Content-Type": "application/json"
-            }
-        })
-            .then(res => {
-                setUser(res.data);
-            })
-            .catch(error => console.log(error))
     }
 
     return (
         <ul className="user_actions">
-            <li><button onClick={modify} >Modificar</button></li>
-            <li><button >Cambiar nombre</button></li>
-            <li><button >Eliminar cuenta</button></li>
+            <li><button onClick={ modify } > Modificar</button></li>
+            <li><button >Cambiar Contraseña</button></li>
+            <li><button onClick={ deleteUser }>Eliminar cuenta</button></li>
         </ul>
     );
 }

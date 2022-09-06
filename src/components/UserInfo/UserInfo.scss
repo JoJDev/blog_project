@@ -7,7 +7,26 @@
 
     justify-content: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin: 2em 1ex 1em;
+    margin: 2em auto 1em;
+    max-width: 800px;
+
+    label {
+        text-align: right;
+        margin-right: 1em;
+    }
+
+    label[id] {
+        justify-self: normal;
+        align-self: baseline;
+        height: 2em;
+
+        text-align: left;
+        margin-left: 1em;
+        width: 90%;
+        border: 0;
+        border-bottom: 1px solid c.$colorBlack;
+        padding: 0 10px;
+    }
 
     input {
         justify-self: normal;
@@ -20,7 +39,7 @@
         padding: 0 10px;
     }
 
-    @mixin button($width:90%) {
+    @mixin button($width: 90%) {
         margin: 2em auto 0;
         width: $width;
         height: 3.5em;
