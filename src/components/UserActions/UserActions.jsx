@@ -1,13 +1,14 @@
-import { useContext } from 'react';
-import { UserContext } from '../../pages/UserPage';
+//import { useContext } from 'react';
+//import { UserContext } from '../../pages/UserPage';
 
 import './UserActions.scss';
 
-export default function UserActions() {
-    const {editForm, setEditForm} = useContext(UserContext);
+export default function UserActions({editForm, setEditForm, }) {
+    //const {editForm, setEditForm} = useContext(UserContext);
 
     function modify(){
         setEditForm(!editForm);
+        console.log(editForm);
 
     }
 
@@ -16,7 +17,16 @@ export default function UserActions() {
     }
 
     function deleteAccount(){
-
+        axios.get(userURL, {
+            headers: {
+                "Authorization": "Bearer " + sessionStorage.getItem("access"),
+                "Content-Type": "application/json"
+            }
+        })
+            .then(res => {
+                setUser(res.data);
+            })
+            .catch(error => console.log(error))
     }
 
     return (

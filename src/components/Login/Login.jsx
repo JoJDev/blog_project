@@ -1,10 +1,12 @@
 import axios from "axios";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import './Login.scss';
 
 export default function Login() {
     const [message, setMessage] = useState("");
+    const navigate = useNavigate();
 
     const loginURL = `${import.meta.env.VITE_BLOG_API_BASE_URL}auth/login/`;
 
@@ -19,16 +21,25 @@ export default function Login() {
         // axios.get("https://api.thecatapi.com/v1/favourites?api_key=5e7015cc-0034-4e5a-9caf-cfab4807e3b7")
         //     .then(res => sessionStorage.setItem("p",res.data[0].id + "4"))//console.log(res.data))
         //     .catch(error => console.error(error));
-
+        console.log(event);
         axios.post(loginURL, {
             "email": event.target.email.value,//"dan@gmail.com",
             "password": event.target.pass.value//"pass"
         })
             .then(res => {
-                console.log(res.data);
-                !sessionStorage.getItem("access") ? saveKeys(res.data) : "";
+                saveKeys(res.data);
+                navigate("/me");
             })
-            .catch(error => setMessage("Error: Correo electronico o contraseña incorrecta"));
+            .catch(error => {
+                if (error.response.data) {
+                    setMessage("Correo electronico o contraseña incorrecta")
+                }
+                else if (error.code === "ERR_NETWORK")
+                    setMessage("Problemas con el servidor")
+                else
+                    setMessage("Problemas con la aplicación")
+                console.log(error)
+            });
     }
 
 
@@ -39,9 +50,9 @@ export default function Login() {
 
             <form onSubmit={ handleSubmit }>
                 <label htmlFor="email"> Correo electronico</label>
-                <input type="email" id="email" required autoFocus/>
+                <input type="email" id="email" required autoFocus />
                 <label htmlFor="pass"> Contraseña</label>
-                <input type="password" id="pass" required/>
+                <input type="password" id="pass" required />
                 <input type="submit" value="Inicia sesión" />
             </form>
         </div>
