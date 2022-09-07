@@ -7,6 +7,7 @@ nav {
     justify-content: end;
     align-items: center;
     background-color: colors.$color30;
+    z-index: 2;
 
     .bar-btn {
         font-size: medium;
@@ -16,7 +17,7 @@ nav {
     }
 
     ul {
-        position: fixed;
+        position: absolute;
         width: 100%;
         height: 0vh;
         top: 100px;
@@ -55,7 +56,7 @@ nav {
     }
 
     #check:checked~ul {
-        height: 100vh;
+        height: 14em ;
     }
 
     #check:checked~ul li {

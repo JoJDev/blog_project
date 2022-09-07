@@ -1,0 +1,38 @@
+@use './../../common/colors' as c;
+
+.hero_section{
+    background: url("./../../assets/tech-background.jpg.jpg")   center;
+    height: 500px;
+    position: relative;
+    
+    padding: 7em 2em;
+    color: c.$color60;
+    text-align: center;
+
+    h1{
+        font-size: 3em;
+        margin: 2ex auto 1ex;
+        text-shadow: 5px 5px 4px c.$color10;
+    }
+
+    h2{
+        font-size: 2em;
+        margin: 1ex auto;
+        text-shadow: 3px 3px 3px c.$color10;
+    }
+    
+}
+
+@media screen and (min-width: c.$breakPointTablet) {
+    .hero_section{
+        
+        h1{
+            margin: 1ex;
+
+        }
+        h2{
+        //max-width: 311px;
+
+        }
+    }
+}
