@@ -1,8 +1,3 @@
-//import { useState, useEffect, useContext } from "react";
-//import { UserContext } from "../../pages/UserPage";
-
-//import axios from "axios";
-
 import './UserInfo.scss';
 
 export default function UserInfo({ user, editForm, setEditForm, saveUser }) {
