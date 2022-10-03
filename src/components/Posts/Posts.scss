@@ -1,0 +1,17 @@
+@use './../../common/colors.scss' as c;
+
+.posts__section {
+    display: flex;
+    flex-flow: column nowrap;
+
+    margin: 1.5ex;
+
+}
+
+@media screen and (min-width: c.$breakPointTablet) {
+    .last_posts__section {
+        flex-flow: row nowrap;
+
+        margin: 2em;
+    }
+}

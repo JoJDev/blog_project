@@ -1,1 +1,77 @@
 @use './../../common/colors.scss' as c;
+@import './../../common/colors';
+
+
+.post_card {
+    border: 1px solid black;
+    border-radius: 4px;
+    // height: 150px;
+    margin: 1ex 0;
+    // background-color: c.$color60;
+
+    &__link {
+        text-decoration: none;
+        color: black;
+        display: flex;
+        // align-items: center;
+        // width: 90%;
+        padding: 1ex;
+    }
+
+    a:hover {
+        @include button--hover();
+    }
+}
+
+.post_card__img {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 30vw;
+    height: 130px;
+    overflow: hidden;
+
+    img {
+        width: auto;
+        height: 100%;
+        
+    }
+}
+
+.post_card__text {
+    width: 90%;
+    padding: 10px;
+
+    .post_card__body {
+        height: 80%;
+
+        h4 {
+            font-size: larger;
+        }
+
+        p {
+            display: none;
+        }
+    }
+
+    .post_card__footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        // padding: 15px;
+        // font-size: medium;
+        // font-weight: 600;
+
+
+    }
+}
+
+
+@media screen and (min-width: c.$breakPointTablet) {
+    .post_card {
+        display: flex;
+        height: 250px;
+        max-width: 80vw;
+        padding: 1ex;
+    }
+}

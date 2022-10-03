@@ -69,11 +69,11 @@ nav {
 @media screen and (min-width: colors.$breakPointTablet) {
     nav {
         height: 100px;
-
+        
         .bar-btn {
             display: none;
         }
-
+        
         ul {
             position: relative;
             height: 100px;
@@ -81,7 +81,8 @@ nav {
             background: none;
             transition: none;
             text-align: right;
-            margin-right: 50px;
+            margin-right: 25px;
+            flex-wrap: nowrap;
 
             li {
                 display: inline-block;
